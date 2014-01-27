@@ -1,0 +1,273 @@
+//REMOVE BROWSER HIGHLIGHTING
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+// ------------------------------------
+
+.form-fields{
+    list-style:none;
+    margin:0;
+}
+.form-fields > .row{
+    margin-bottom: 3%;
+}
+.form-fields > .row:last-child{
+    margin-top: 7%;
+    margin-bottom:0;
+}
+
+label,
+.label{
+    display:block;
+    font: 600 16px/24px "freight-sans-pro",sans-serif;
+    color:#ffffff;
+    padding: 0 0.4em;
+}
+
+.check-list{
+    list-style:none;
+    margin:0;
+}
+
+// Labels in check-lists
+.check-label,
+.check-list label,
+.check-list .label{
+    display:inline-block;
+}
+
+// ------------------------------------
+
+
+.find-home-container {
+    position: absolute;
+    right: 8px;
+    top: 4px;
+    width:340px;
+    padding:5px 10px 15px;
+}
+
+form ul {margin:0;padding:0;}
+
+.row {width:100%;}
+.col1 {width:98%;padding: 0 1%;}
+.col2 {width:48%; display:inline-block; padding:0 1%;}
+
+.find-home-title {
+    font: 44px "jaf-bernino-sans-comp",sans-serif;
+    letter-spacing: 1px;
+    color:#81cbc8;
+    text-align: left;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.popover-title {
+    font: 32px "jaf-bernino-sans-comp",sans-serif;
+    letter-spacing: 1px;
+    color:#ffffff;
+    text-align: left;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.popover-subhead {
+    color: #3c2a15;
+}
+
+.styled { 
+    padding:1% 0 1% 2%; 
+    margin:0; 
+    width:98%; 
+    border-radius:0px; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2); 
+    background: rgba(230,228,226,1);
+    background: -moz-linear-gradient(top, rgba(230,228,226,1) 0%, rgba(197,195,193,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(230,228,226,1)), color-stop(100%, rgba(197,195,193,1)));
+    background: -webkit-linear-gradient(top, rgba(230,228,226,1) 0%, rgba(197,195,193,1) 100%);
+    background: -o-linear-gradient(top, rgba(230,228,226,1) 0%, rgba(197,195,193,1) 100%);
+    background: -ms-linear-gradient(top, rgba(230,228,226,1) 0%, rgba(197,195,193,1) 100%);
+    background: linear-gradient(to bottom, rgba(230,228,226,1) 0%, rgba(197,195,193,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e4e2', endColorstr='#c5c3c1', GradientType=0 );
+}
+
+div.styled select { 
+    width:100%;
+    background-color:transparent; /* this hides the select's background making any styling visible from the div */
+    background-image:url('../img/drop_down_arrow.png'); 
+    background-repeat:no-repeat;
+    background-position: 97% 60%;
+    -webkit-appearance: none /* this is required for Webkit  */; 
+    -moz-appearance: none /* this is required for Mozilla  */; 
+    border:none; 
+    box-shadow:none; 
+    padding:1% 2%; /* padding should be added to the select, not the div */
+    font: 400 14px/24px "freight-sans-pro",sans-serif;
+}
+
+div.styled input {
+    width:100%;
+    background-color:transparent; /* this hides the select's background making any styling visible from the div */
+    background-repeat:no-repeat;
+    background-position: 97% 60%;
+    -webkit-appearance: none /* this is required for Webkit */; 
+    -webkit-appearance: none /* this is required for Mozilla */; 
+    border:none; 
+    box-shadow:none; 
+    padding:1% 2%; /* padding should be added to the select, not the div */
+    font: 400 14px/24px "freight-sans-pro",sans-serif;
+}
+
+.custom-label {
+    width:10%; margin-right:2%; line-height:32px;
+    font: 600 16px/32px "freight-sans-pro",sans-serif;
+    color:#fff;
+    padding-left: 4%;
+
+}
+
+.check-the-box {position: relative;}
+
+.sidebar .custom-label {
+    color:#3c2a15;
+}
+
+.sidebar .styled {
+    border: 1px solid rgba(60, 42, 21, 0.1);
+    box-shadow: none;
+
+}
+
+input[type=checkbox]{
+    display: none;
+
+}
+
+ input[type=checkbox] + label.box{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    line-height: 40px;
+    cursor: pointer;
+
+    box-shadow: inset 0 1px 10px 1px rgba(60, 42, 21, 0.1); 
+
+    border: 1px solid rgba(60, 42, 21, 0.1);
+}
+
+input[type=checkbox]:checked + label.box{
+  background-position: left -32px;
+}
+
+label.box{
+    padding: 0;
+    position: absolute;
+    right: 0;
+    width:30px;
+    background-image:url('../img/checkbox.png');
+    background-repeat: no-repeat;
+    vertical-align:bottom;
+    background-color: rgba(230,228,226,1);
+    background-color: -moz-linear-gradient(top, rgba(230,228,226,1) 0%, rgba(197,195,193,1) 100%);
+    background-color: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(230,228,226,1)), color-stop(100%, rgba(197,195,193,1)));
+    background-color: -webkit-linear-gradient(top, rgba(230,228,226,1) 0%, rgba(197,195,193,1) 100%);
+    background-color: -o-linear-gradient(top, rgba(230,228,226,1) 0%, rgba(197,195,193,1) 100%);
+    background-color: -ms-linear-gradient(top, rgba(230,228,226,1) 0%, rgba(197,195,193,1) 100%);
+    background-color: linear-gradient(to bottom, rgba(230,228,226,1) 0%, rgba(197,195,193,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e4e2', endColorstr='#c5c3c1', GradientType=0 );
+}
+
+.get-started {
+    font: 24px "jaf-bernino-sans-comp",sans-serif;
+    letter-spacing: 1px;
+    color:#fff;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.submit {
+    background-color: #844f67;
+    border: 1px solid #fff;
+    color: #fff;
+    padding:2px 0;
+    width:100%;
+    font-size: 22px;
+    text-decoration: none;
+    cursor: poiner;
+    // transition: background-color 0.2s ease;
+    font: 400 24px "jaf-bernino-sans-comp",sans-serif;
+    letter-spacing: 1px;
+}
+
+.submit:hover {
+    background-color:#9b5e79;
+    box-shadow: 0px 0px 1px #777;
+}
+
+.get-started i {margin-left: 20px;}
+
+.kmi-popover .submit {  
+    background-color: #3c2a15;    
+}
+
+.kmi-popover .submit:hover {  
+    background-color: #644726;    
+}
+
+.kmi-popover label {color: #3c2a15;}
+
+.kmi-popover {
+    position: absolute;
+    width: 350px;
+    top: 135px;
+    right: 10px;
+    z-index: 4000;
+    background-color: #81cbc8;
+    padding: 10px 10px 20px;
+    box-shadow: 2px 5px 10px 1px rgba(0,0,0,0.1); 
+}
+
+.kmi-popover:after {
+    bottom: 100%;
+    right: 35%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #81cbc8;
+    border-width: 20px;
+    margin-left: -20px;
+}
+
+.kmi-popover .styled-input { 
+    padding:1% 0 1% 2%; 
+    margin:0; 
+    width:98%; 
+    border-radius:0px; 
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);  
+    background: #e9fafa;
+}
+
+div.styled-input input {
+    width:100%;
+    background-color:transparent; /* this hides the select's background making any styling visible from the div */
+    background-repeat:no-repeat;
+    background-position: 97% 60%;
+    -webkit-appearance: none /* this is required for Webkit browsers */; 
+    -moz-appearance: none /* this is required for Webkit browsers */; 
+    border:none; 
+    box-shadow:none; 
+    padding:1% 2%; /* padding should be added to the select, not the div */
+    font: 400 14px/24px "freight-sans-pro",sans-serif;
+}
+
+
+

@@ -1,0 +1,386 @@
+@charset "UTF-8";
+
+
+@import "normalize";
+@import "reset";
+
+
+html, body {
+	overflow-x:hidden;
+    height: 100%;
+}
+
+html {position: relative;}
+
+body {
+	font: 14px "Helvetica Neue", sans-serif;
+    background-color:#000;
+}
+
+
+.clear {clear: both;}
+
+.slide {overflow-y:auto;}
+
+
+.container {
+    width:100%;
+    position:absolute;//position relative will scroll indepentantly but will cause issues on iOS
+    left:0px;
+    top:0px;
+    overflow-x: hidden;
+    // height: auto;
+    // height: 100%;
+    // background-color: navy;
+}
+
+// .container.two-paned {
+//     position:relative;
+
+// }
+
+
+
+.fullscreen {
+    width:100%;
+    position:absolute;
+    left:0px;
+    top:0px;
+    overflow-x: hidden;
+    // height: auto; ///onepanel
+    height: 100%; // full screen
+}
+
+
+////////////////////////////////// NAV
+
+.nav-main {
+    position: fixed;
+    top: 0;
+    right: 5px;
+    z-index: 10;
+    height: auto;
+    overflow-y: auto;
+}
+
+.nav-main li {
+    float: left;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-main a {
+    color: #3c2a15;
+    padding: 0 15px;
+    display: block;
+    line-height: 75px;
+}
+
+////////////////////////////////// TOPBAR
+
+.topbar{
+    position:fixed;
+    width:100%;
+    top:0px;
+    left:0px;
+    line-height:75px;
+    height:75px;
+    background:#ddd;
+    text-align:center;
+    z-index:1; /*for some reason we need a z index now*/
+}
+
+.menu-button {display: none;}
+
+.burger {
+    position: absolute;
+    float: left;
+    padding: 10px;
+    top: 13px;
+    left: 10px;
+    // display: none;
+}
+
+.burger li {
+    width: 26px;
+    height: 3px;
+    background-color: #3c2a15;
+    border-radius: 3px;
+    margin: 5px 0;
+}
+
+////////////////////////////////// FULL CONTAINER
+
+.full-cont {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom:0;
+    background-color: #000000; 
+    width: 100%;
+    display: block;
+    z-index: -1;
+    // height: 100%;
+}
+
+.slides {
+        position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.slide1 {   
+    background-image: url('http://placehold.it/1280x853&text=Slide1+(1280x853)');
+    background-repeat: no-repeat;
+    background-position: top center;
+    // background-attachment: fixed;
+    background-size: cover;
+}
+
+//////////////////////////////////
+
+.wrapper {
+    float:left;
+    margin-top: 75px;
+    padding-bottom: 70px;
+    background:white;
+    // padding:5px;
+    display: inline-block;
+    width:40%;
+}
+
+
+// .w1b-cont {
+// position: relative;
+//     width:40%;
+//     height: 100%;
+// overflow:hidden;
+
+// }
+
+.wrapper1b {
+    position: fixed;
+    margin-top: 75px;
+    margin-bottom: 140px;
+    padding-bottom: 100px;
+    background:white;
+    display: inline-block;
+    width:40%;
+    height: auto;
+    max-height: 100%;
+
+
+        //Smooth scroll for iOS
+        overflow-y:auto;
+        // overflow-y: scroll; /* has to be scroll, not auto */
+        -webkit-overflow-scrolling: touch;
+}
+
+.wrapper2 {
+    float:right;
+    margin-top: 75px;
+    padding-bottom: 70px;
+    background:white;
+    // padding:5px;
+    display: inline-block;
+    width:60%;
+    overflow: hidden;
+}
+
+.push-down {
+    display: inline-block;
+    // padding-bottom: 80px;
+}
+
+.push-down1b {
+    display: inline-block;
+    margin-bottom: 140px;
+        // padding-bottom: 140px;
+}
+
+.pane1b-backdrop {
+    position: fixed;
+    top: 0;
+    left:0;
+    bottom:0;
+    width: 40%;
+    background-color: #efefef;
+    z-index: -1;
+
+}
+
+.pane2-backdrop {
+    position: fixed;
+    top: 0;
+    right:0;
+    bottom:0;
+    width: 60%;
+    background-color: #a9a9a9;
+    z-index: -1;
+
+}
+
+//////////////////////////////////
+
+
+.footer-large {
+    position:fixed;
+    width:100%;
+    bottom:0px;
+    left:0px;
+    line-height:65px;
+    background:#ddd;
+    text-align:center;
+    z-index:1; /*for some reason we need a z index now*/
+}
+
+.footer-mobile {
+	display:none;
+    position:fixed;
+    width:100%;
+    bottom:0px;
+    left:0px;
+    line-height:65px;
+    background:#ddd;
+    text-align:center;
+    z-index:1; /*for some reason we need a z index now*/
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 980px) {
+
+}
+    
+// @media only screen and (max-width: 769px) {
+
+//      .nav-cont { 
+//         position: fixed;
+//         top:0;
+//         // bottom:0;
+//         height: 0;}
+
+
+// }
+
+
+@media only screen and (max-width: 768px) {
+
+
+
+    .wrapper1b {display: none;}
+    .wrapper2 {
+        float:none;
+        margin-top: 85px;
+        padding-bottom: 70px;
+        background:white;
+        // padding:5px;
+        display: inline-block;
+        width:95%;
+        margin-left: 2.5%;
+    }
+
+
+    .menu-button {display: block;}
+    .footer-large {display: none;}
+    .footer-mobile {display: block;}
+
+    .full-cont {
+            z-index: 0;
+    }
+
+    .nav-cont { 
+        position: fixed;
+        top:0;
+        // bottom:0;
+        height: 100%;
+        width: 240px;
+        background-color: green;
+        overflow-x:hidden;
+
+        //Smooth scroll for iOS
+        overflow-y:auto;
+        // overflow-y: scroll; /* has to be scroll, not auto */
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-main{
+        position:absolute;
+        top:0px;
+        left:0px;
+        // right:auto;
+        width:240px;
+        color:white;
+        z-index: 0;
+        // background:gray;
+        // height: 1000px;
+    }
+
+    .nav-main li {
+    		display: block;
+    		float: none;
+    	}
+
+    .nav-main li a {
+    	padding: 10px 0 10px 10px;
+    	letter-spacing: 3px;
+    	font-size: 16px;
+    	color:#ffffff;
+        line-height: 5px;
+        background-color: maroon;
+        margin-bottom: 2px;
+    }
+
+
+    ////////////////////////////////// CONTENT
+
+    .wrapper {
+        margin-top: 85px;
+        padding-bottom: 70px;
+        background:white;
+        // padding:5px;
+        display: inline-block;
+        width:95%;
+        margin-left: 2.5%;
+    }
+
+    ////////////////////////////////// ANIMATION
+
+
+    .slide {
+        -webkit-transition:-webkit-transform .2s ease-in-out;
+        -webkit-transform: translate(0,0);
+    }
+
+    .container.open .slide {
+        -webkit-transform: translate(240px,0);
+    }
+
+    .container.close .slide {
+        -webkit-transform: translate(0,0);
+    }
+
+
+
+
+}
+
+
+
+
+@media only screen and (max-width: 540px) {
+
+}
+
+@media only screen and (max-width: 320px) {
+
+}

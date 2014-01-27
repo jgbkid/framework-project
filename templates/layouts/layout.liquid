@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="description" content="">
+
+        <!-- ENABLE OFFLINE APP FUNCTIONALITY -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!-- SET STATUS BAR STYLE -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+        <!-- Title block allowing child pages to override -->
+        <title>{% block title %}Framework{% endblock %}</title>
+
+        <!-- Fonts -->
+        <!--Font Awesome-->
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
+
+        <!-- Favicon / touch-icon -->
+        {% comment %}        
+        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        <link rel="apple-touch-icon" type="image/png "href="/apple-touch-icon.png" >
+        {% endcomment %}
+
+        <!-- Styles -->
+        {{ "styles.css" | asset_url | stylesheet_tag }}
+
+        <!-- Style block allowing child pages to inject their own styles -->
+        {% block styles %}{% endblock %}
+
+        <!-- Modernizr -->   
+        {{ "modernizr.js" | asset_url | script_tag }}
+
+    </head>
+
+<!-- TODO: Known Issue: Side scrolling breaks on orientation change -->
+
+    <body>
+
+            <!-- Include -->
+            {% comment %}            
+            {% include "header" %}
+            {% endcomment %}
+
+            <!-- Content block, child page inject content -->
+            {% block content %}{% endblock %}
+
+
+        <!-- Script block allowing child pages to inject their own scripts -->
+        {% block scripts %}{% endblock %}
+
+        {% include "scripts" %}
+
+    </body>
+</html>

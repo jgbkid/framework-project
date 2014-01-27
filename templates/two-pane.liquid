@@ -1,11 +1,11 @@
 {% block content %} 
 
 
-<div class="container two-paned">
+<div class="container">
 
 	{% include "nav" %}
 
-    <div class="topbar slide">
+    <div class="topbar drawer">
 
     	<a class="menu-button">
 		    <ul class="burger">
@@ -15,45 +15,46 @@
     	<p>This is a topbar</p>
     </div>
 
-	<div class="full-cont slideshow slide">
+	<div class="full-cont slideshow drawer">
 		<div class="all-slides slides slide1"></div>
-{% comment %}	<div class="all-slides slides slide2"></div>
-	<div class="all-slides slides slide3"></div>{% endcomment %}
+		{% comment %}	
+		<div class="all-slides slides slide2"></div>
+		<div class="all-slides slides slide3"></div>
+		{% endcomment %}
 	</div>
 
-{% comment %}	<div class="w1b-cont">{% endcomment %}
-	    <div class="wrapper1b slide">
-			<ul>Search here <br><br>
-				<li>Content1</li>
-				<li>Content2</li>
-				<li>Content3</li>
-				<li>Content4</li>
-				<li>Content5</li>
-				<li>Content6</li>
-				<li>Content7</li>
-				<li>Content8</li>
-				<li>Content9</li>
-				<li>Content</li>
-				<li>Content</li>
-				<li>Content</li>
-				<li>Content</li>
-				<li>Content</li>
-				<li>Content</li>
-				<li>Content</li>
-				<li>Content</li>
-				<li>Content</li>
-				<li>Content</li>
-				<li>Content</li>
-				<img src="http://placehold.it/300x300&text=Placehold" alt="">
-			</ul>
-			<p class="push-down1b">Push Down</p>
-	    </div>
-{% comment %}    </div>{% endcomment %}
+    <div class="double-pane-left drawer">
+		<ul>Search here <br><br>
+			<li>Content1</li>
+			<li>Content2</li>
+			<li>Content3</li>
+			<li>Content4</li>
+			<li>Content5</li>
+			<li>Content6</li>
+			<li>Content7</li>
+			<li>Content8</li>
+			<li>Content9</li>
+			<li>Content</li>
+			<li>Content</li>
+			<li>Content</li>
+			<li>Content</li>
+			<li>Content</li>
+			<li>Content</li>
+			<li>Content</li>
+			<li>Content</li>
+			<li>Content</li>
+			<li>Content</li>
+			<li>Content</li>
+			<img src="http://placehold.it/300x300&text=Placehold" alt="">
+		</ul>
+		<p class="push-down-more">Push Down</p>
+    </div>
 
-	<div class="pane1b-backdrop"></div>
+	<div class="left-pane-backdrop"></div>
 
-	 <div class="wrapper2 slide">
+	 <div class="double-pane-right drawer">
 		<ul>
+			<p>Second Pane Results Area</p>
 			<li>Content1</li>
 			<li>Content2</li>
 			<li>Content3</li>
@@ -121,18 +122,16 @@
 			<li>Content</li>
 			<li>Content</li>
 			<li>Content</li>
-
-
 		</ul>
 		<p class="push-down">Push Down</p>
     </div>
 
-    <div class="pane2-backdrop"></div>
+    <div class="right-pane-backdrop"></div>
 
 	<div class="clear"></div>
 
-    <footer class="footer-large slide">Footer</footer>
-    <footer class="footer-mobile slide">Mobile Footer</footer>
+    <footer class="footer-large drawer">Footer</footer>
+    <footer class="footer-mobile drawer">Mobile Footer</footer>
 </div>
 
 

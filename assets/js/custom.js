@@ -2,50 +2,35 @@
 $(document).ready(function(){
 
 
-		/* TODO: Find a way to close by clicking content area */
-
+	/* TODO: Find a way to close by clicking content area */
 
 	// $(function(){
 	//     $('.menu-button').click(function(){$('.container').toggleClass('active');});
 	// });
 
+	var container = $('.container');
 
+	$('.menu-button').click(function(){
 
-		var container = $('.container');
+		// $(content).toggleClass('open');
 
-	    $('.menu-button').click(function(){
+		if (container.hasClass('open')) {
 
-	    	// alert('button');
+			$(container).removeClass('open');
+		}
+		else {
 
-	    	// $(content).toggleClass('open');
+			$(container).addClass('open');
+		}
 
-	    	if (container.hasClass('open')) {
-	    		$(container).removeClass('open');
-	    		// alert('close');
+	});
 
-	    	}
-			else {
-				// alert('open');
-					
-				$(container).addClass('open');
-			}
+	// content.click(function(){
+	// 	if (content.hasClass('open')) {
 
-		});
-
-
-
-
-
-
-
-
-
-		// content.click(function(){
-		// 	if (content.hasClass('open')) {
-
-		// 		$(content).removeClass('open');
-		// 	}
-		// });
+	// 		$(content).removeClass('open');
+	// 	}
+	// });
 
 
     // $('.slideshow').each(function(index) {
@@ -66,8 +51,5 @@ $(document).ready(function(){
     //         }
     //     });
     // });
-
-
-
 
 });

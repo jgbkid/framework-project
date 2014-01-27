@@ -6,24 +6,24 @@
 
 
 html, body {
-	overflow-x:hidden;
+    overflow-x:hidden;
     height: 100%;
 }
 
 body {
-	font: 14px "Helvetica Neue", sans-serif;
     background-color:#000;
+    font: 14px "Helvetica Neue", sans-serif;
 }
 
 .clear {clear: both;}
 .drawer {overflow-y:auto;}
 
 .container {
-    width:100%;
     position:absolute;//position relative will scroll panels indepentantly but will cause issues on iOS (doesn't trigger UI autohide)
-    left:0px;
     top:0px;
+    left:0px;
     overflow-x: hidden;
+    width:100%;
 }
 
 .fullscreen {height: 100%;}
@@ -36,20 +36,20 @@ body {
     top: 0;
     right: 5px;
     z-index: 10;
-    height: auto;
     overflow-y: auto;
+    height: auto;
 }
 
 .nav-main li {
-    float: left;
     position: relative;
     z-index: 10;
+    float: left;
 }
 
 .nav-main a {
-    color: #3c2a15;
-    padding: 0 15px;
     display: block;
+    padding: 0 15px;
+    color: #3c2a15;
     line-height: 75px;
 }
 
@@ -57,32 +57,32 @@ body {
 
 .topbar{
     position:fixed;
-    width:100%;
     top:0px;
     left:0px;
-    line-height:75px;
+    z-index:1;
+    width:100%;
     height:75px;
     background:#ddd;
     text-align:center;
-    z-index:1;
+    line-height:75px;
 }
 
 .menu-button {display: none;}
 
 .burger {
     position: absolute;
-    float: left;
-    padding: 10px;
     top: 13px;
     left: 10px;
+    float: left;
+    padding: 10px;
 }
 
 .burger li {
+    margin: 5px 0;
     width: 26px;
     height: 3px;
-    background-color: #3c2a15;
     border-radius: 3px;
-    margin: 5px 0;
+    background-color: #3c2a15;
 }
 
 ////////////////////////////////// FULL CONTAINER
@@ -90,40 +90,40 @@ body {
 .full-cont {
     position: fixed;
     top: 0;
-    left: 0;
     bottom:0;
-    background-color: #000000; 
-    width: 100%;
-    display: block;
+    left: 0;
     z-index: -1;
+    display: block; 
+    width: 100%;
+    background-color: #000000;
     // no height
 }
 
 .slides {
-    position: fixed;
+    position: absolute;//'fixed' breaks in IE
     top: 0;
     left: 0;
-    min-height: 100%;
     min-width: 100%;
+    min-height: 100%;
 }
 
 .slide1 {   
     background-image: url('http://placehold.it/1280x853&text=Slide1+(1280x853)');
-    background-repeat: no-repeat;
     background-position: top center;
     // background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 ////////////////////////////////// CONTENT
 
 .single-pane {
+    display: inline-block;
     float:left;
     margin-top: 75px;
     padding-bottom: 70px;
-    background:white;
-    display: inline-block;
     width:40%;
+    background:white;
 }
 
 .double-pane-left {
@@ -142,13 +142,13 @@ body {
 }
 
 .double-pane-right {
+    display: inline-block;
     float:right;
+    overflow: hidden;
     margin-top: 75px;
     padding-bottom: 70px;
-    background:white;
-    display: inline-block;
     width:60%;
-    overflow: hidden;
+    background:white;
 }
 
 .push-down {
@@ -159,16 +159,17 @@ body {
 .push-down-more {
     display: inline-block;
     margin-bottom: 140px;
+    padding-bottom: 140px;//for Firefox and IE
 }
 
 .left-pane-backdrop {
     position: fixed;
     top: 0;
-    left:0;
     bottom:0;
+    left:0;
+    z-index: -1;
     width: 40%;
     background-color: #efefef;
-    z-index: -1;
 
 }
 
@@ -177,9 +178,9 @@ body {
     top: 0;
     right:0;
     bottom:0;
+    z-index: -1;
     width: 60%;
     background-color: #a9a9a9;
-    z-index: -1;
 
 }
 
@@ -188,30 +189,35 @@ body {
 
 .footer-large {
     position:fixed;
-    width:100%;
     bottom:0px;
     left:0px;
-    line-height:65px;
+    z-index:1;
+    width:100%;
+    height: 65px;
     background:#ddd;
     text-align:center;
-    z-index:1;
+    line-height:65px;
 }
 
 .footer-mobile {
-	display:none;
+    display:none;
     position:fixed;
-    width:100%;
     bottom:0px;
     left:0px;
-    line-height:65px;
+    z-index:1;
+    width:100%;
+    height: 65px;
     background:#ddd;
     text-align:center;
-    z-index:1;
+    line-height:65px;
 }
 
 
 
 
+// Media Queiries will not be operational for =<IE8
+//CSS3 Transitions not supported for =<IE9
+//CSS3 Transform not supported for =<IE8 (IE9 supports the -ms-transform property (2D transforms only))
 
 
 @media only screen and (max-width: 1024px) {
@@ -235,12 +241,12 @@ body {
     .nav-cont { 
         position: fixed;
         top:0;
-        height: 100%;
-        width: 240px;
-        background-color: green;
         overflow-x:hidden;
         //Smooth scroll for iOS
         overflow-y:auto;
+        width: 240px;
+        height: 100%;
+        background-color: green;
         -webkit-overflow-scrolling: touch;
     }
 
@@ -248,9 +254,9 @@ body {
         position:absolute;
         top:0px;
         left:0px;
+        z-index: 0;
         width:240px;
         color:white;
-        z-index: 0;
     }
 
     .nav-main li {
@@ -259,13 +265,13 @@ body {
     }
 
     .nav-main li a {
+        margin-bottom: 2px;
         padding: 10px 0 10px 10px;
+        background-color: maroon;
+        color:#ffffff;
         letter-spacing: 3px;
         font-size: 16px;
-        color:#ffffff;
         line-height: 5px;
-        background-color: maroon;
-        margin-bottom: 2px;
     }
 
 
@@ -277,23 +283,23 @@ body {
     ////////////////////////////////// CONTENT
 
     .single-pane {
-        margin-top: 85px;
-        padding-bottom: 70px;
-        background:white;
         display: inline-block;
-        width:95%;
+        margin-top: 85px;
         margin-left: 2.5%;
+        padding-bottom: 70px;
+        width:95%;
+        background:white;
     }
 
     .double-pane-left {display: none;}
     .double-pane-right {
         float:none;
-        margin-top: 85px;
-        padding-bottom: 70px;
-        background:white;
         display: inline-block;
-        width:95%;
+        margin-top: 85px;
         margin-left: 2.5%;
+        padding-bottom: 70px;
+        width:95%;
+        background:white;
     }
 
 
@@ -307,15 +313,27 @@ body {
 
     .drawer {
         -webkit-transition:-webkit-transform .2s ease-in-out;
+        -moz-transition:-moz-transform .2s ease-in-out;
+        // -ms-transition:-ms-transform .2s ease-in-out;
+        transition:transform .2s ease-in-out;
         -webkit-transform: translate(0,0);
+        -moz-transform: translate(0,0);
+        -ms-transform: translate(0,0);//For IE9
+        transform: translate(0,0);
     }
 
     .container.open .drawer {
         -webkit-transform: translate(240px,0);
+        -moz-transform: translate(240px,0);
+        -ms-transform: translate(240px,0);//For IE9
+        transform: translate(240px,0);
     }
 
     .container.close .drawer {
         -webkit-transform: translate(0,0);
+        -moz-transform: translate(0,0);
+        -ms-transform: translate(0,0);//For IE9
+        transform: translate(0,0);
     }
 
 
